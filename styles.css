@@ -1,0 +1,74 @@
+.container {  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1.1fr 0.9fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "TEA TEA tags tags"
+    "description description description description"
+    "therapy Education experencies credentials"
+    "tramits asociations resources events"
+    "sentiments sentiments sentiments sentiments"
+    "apoyo preocupacion Esperanza a_attention"
+    "info info info info";
+}
+
+.TEA { grid-area: TEA; }
+
+.therapy { grid-area: therapy; }
+
+.Education { grid-area: Education; }
+
+.tags { grid-area: tags; }
+
+.description { grid-area: description; }
+
+.experencies { grid-area: experencies; }
+
+.credentials { grid-area: credentials; }
+
+.tramits { grid-area: tramits; }
+
+.asociations { grid-area: asociations; }
+
+.resources { grid-area: resources; }
+
+.events { grid-area: events; }
+
+.sentiments { grid-area: sentiments; }
+
+.apoyo { grid-area: apoyo; }
+
+.preocupacion { grid-area: preocupacion; }
+
+.Esperanza { grid-area: Esperanza; }
+
+.a_attention { grid-area: a_attention; }
+
+.info { grid-area: info; }
+
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+
+/* For presentation only, no need to copy the code below */
+
+.container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.container *:after {
+  /* content:attr(class); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
