@@ -1,11 +1,21 @@
-import { createRoot } from 'react-dom/client';
-import App from './App';
+// App.tsx
 
-const rootElement = document.getElementById('root');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from './config/theme'; // Ruta al archivo de tema que has creado
 
-if (rootElement) {
-  const root = createRoot(rootElement);
-  root.render(<App />);
-} else {
-  console.error("No element with id 'root' in the document.");
-}
+
+const App: React.FC = () => {
+  return (
+    <ChakraProvider theme={theme}>
+      <App />
+    </ChakraProvider>
+  );
+};
+
+
+
+
+
+ReactDOM.render(<App />, document.getElementById('root'));
